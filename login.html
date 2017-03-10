@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/style.css "rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav public-bgcolor">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">登录</h1>
+		</header>
+		<div class="mui-content login-bgcolor">
+		    <form class="mui-input-group">
+		        <div class="mui-input-row">
+		            <label>用户名</label>
+		            <input type="text" class="mui-input-clear" placeholder="请输入用户名">
+		        </div>
+		        <div class="mui-input-row">
+		            <label>密码</label>
+		            <input type="password" class="mui-input-clear" placeholder="请输入密码">
+		        </div>
+		    </form>
+		    <button class="btn_login" id="login">登录</button>
+		    <button class="mui-btn-link link" >去注册</button>
+		</div>
+		<script src="js/castapp.js"></script>
+		<script>
+			ca.init();
+			var oI=ca.className('mui-input-clear');
+			
+			var login=ca.id('login');
+			ca.click(login,function(){
+				if(oI[0].value=='')
+				{
+					ca.prompt('用户名不能为空');
+					return;
+				}
+				if(oI[1].value==''){
+					ca.prompt('密码不能为空');
+					return;
+				}
+				if(oI[0].value==localStorage.getItem('username')){
+					if(oI[1].value==localStorage.getItem('password')){
+						ca.prompt('登录成功');
+					ca.newInterface({
+						url:'mine.html',
+						id:'mine'
+					})
+					}else{
+						ca.prompt('密码输入错误');
+						return;
+					}
+					
+				}
+			})
+			
+			var oB=ca.tagName('button');
+			ca.click(oB[1],function(){
+				ca.newInterface({
+					url:'register.html',
+					id:'register'
+				})
+			})
+		</script>
+	</body>
+
+</html>

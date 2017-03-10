@@ -1,0 +1,67 @@
+{
+  "index.html": {
+    "resources": [
+      "js/castapp.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "community.html",
+      "css/style.css"
+    ],
+    "refer": [
+      "persons.html",
+      "mine.html"
+    ]
+  },
+  "community.html": {
+    "resources": [
+      "css/mui.min.css",
+      "css/style.css",
+      "images/banner1.png",
+      "images/banner.png"
+    ],
+    "refer": []
+  },
+  "mine.html": {
+    "resources": [
+      "css/mui.min.css",
+      "css/style.css",
+      "images/header.png",
+      "js/castapp.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "persons.html": {
+    "resources": [
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "login.html": {
+    "resources": [
+      "js/castapp.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css"
+    ],
+    "refer": [
+      "register.html",
+      "mine.html"
+    ]
+  },
+  "register.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/castapp.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/style.css"
+    ],
+    "refer": [
+      "mine.html"
+    ]
+  }
+}
