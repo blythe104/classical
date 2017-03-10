@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+	<!--侧滑菜单部分-->
+	<aside id="offCanvasSide" class="mui-off-canvas-right">
+		<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				
+				<div style="height:200px;"></div>
+				<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
+					<li class="mui-table-view-cell" id="c1">
+						<a class="mui-navigate-right">
+							关 1
+						</a>
+					</li>
+					<li class="mui-table-view-cell" id="c2">
+						<a class="mui-navigate-right">
+							Item 2
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							Item 3
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							Item 4
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							Item 5
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							Item 6
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</aside>
+	<!--主界面部分-->
+	<div class="mui-inner-wrap">
+		<header class="mui-bar mui-bar-nav public-bgcolor">
+			<a class="mui-icon mui-pull-left img">
+				<img src="images/header.png" id="img"/>
+			</a>
+			<h1 class="mui-title">侧滑导航</h1>
+		</header>
+	</div>
+</div>
+	</body>
+	<script src="js/castapp.js"></script>
+	<script>
+		ca.init();
+		var kai = ['img'];
+		var guan = ['c1','c2'];
+		ca.sideslipNav('main-move',kai,guan);
+	</script>
+
+</html>
